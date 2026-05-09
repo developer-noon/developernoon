@@ -78,7 +78,7 @@ import Button from "../Button";
 
 const Hero = () => {
   return (
-    <div className="w-full min-h-[600px] relative text-center text-gray font-helvetica-now-display py-16 md:py-24 lg:py-40 overflow-x-hidden">
+    <div className="w-full min-h-[700px] md:min-h-[600px] relative text-center text-gray font-helvetica-now-display py-28 sm:py-12 md:py-24 lg:py-40 overflow-x-hidden bg-white">
       {/* Background Images - Hidden on mobile, visible on larger screens */}
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
         {/* Left Image - Puzzle - More visible and inside */}
@@ -120,32 +120,35 @@ const Hero = () => {
       </div>
 
       {/* Content - Always centered and responsive */}
-      <div className="relative z-10 px-4 sm:px-6 md:px-8">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[66px] font-bold tracking-[-0.03em] leading-[1.2] md:leading-[1.3] lg:leading-[68px] max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[744px] mx-auto">
-          <span>Your </span>
-          <span className="uppercase text-royalblue">users</span>
-          <span> shouldn&apos;t need a manual to love your </span>
-          <span className="uppercase text-tomato">
+      <div className="relative z-10 px-5 sm:px-6 md:px-8">
+        <h1 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[66px] font-bold tracking-[-0.02em] sm:tracking-[-0.03em] leading-[1.3] sm:leading-[1.2] md:leading-[1.3] lg:leading-[68px] max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[744px] mx-auto">
+          <span className="font-bold">Your </span>
+          <span className="uppercase text-royalblue font-bold">users</span>
+          <span className="font-bold">
+            {" "}
+            shouldn&apos;t need a manual to love your{" "}
+          </span>
+          <span className="uppercase text-tomato font-bold">
             <span>product</span>
             <span className="text-gray">!</span>
           </span>
         </h1>
 
         {/* Description */}
-        <p className="text-sm sm:text-base md:text-xl lg:text-2xl max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[670px] mx-auto mt-6 sm:mt-8 md:mt-10 lg:mt-12 text-gray/80 px-2">
+        <p className="px-8 text-lg sm:text-sm md:text-base lg:text-xl xl:text-2xl max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[670px] mx-auto mt-6 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12 text-gray/70 sm:text-gray/80 px-2">
           Turns confusion into confidence, clicks into calm, and frustration
           into flow. No guesswork. No ego. Just research-backed design that
           actually works for real people.
         </p>
 
         {/* CTA Button */}
-        <div className="flex justify-center mt-8 sm:mt-10 md:mt-12">
+        <div className="flex justify-center mt-8 sm:mt-8 md:mt-10 lg:mt-12">
           <Button
             className="flex whitespace-nowrap"
             variant="filled"
             size="large"
             rightIcon={
-              <div className="relative w-5 h-5 md:w-8 md:h-8">
+              <div className="relative w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8">
                 <Image
                   src="/button-icon.svg"
                   alt="Smile Icon"
@@ -155,7 +158,7 @@ const Hero = () => {
               </div>
             }
           >
-            <span className="text-sm sm:text-base md:text-lg lg:text-xl">
+            <span className="text-lg sm:text-sm md:text-base lg:text-lg xl:text-2xl">
               Let's talk UX research
             </span>
           </Button>

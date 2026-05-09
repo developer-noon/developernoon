@@ -1,6 +1,6 @@
-import Section01 from "@/components/sections/Section01";
 import Header from "../components/Header";
 import Hero from "../components/sections/Hero";
+import Section01 from "../components/sections/Section01";
 
 const Home = () => {
   return (

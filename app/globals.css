@@ -59,17 +59,17 @@ button {
 
 /* Utility classes for Helvetica Now Display */
 .font-helvetica-now-display {
-  font-family: "Helvetica Now Display", system-ui, sans-serif;
+  font-family: "Helvetica Now Display", "outfit", system-ui, sans-serif;
 }
 .font-helvetica-now-display-medium {
-  font-family: "Helvetica Now Display", system-ui, sans-serif;
+  font-family: "Helvetica Now Display", "outfit", system-ui, sans-serif;
   font-weight: 500;
 }
 .font-helvetica-now-display-semibold {
-  font-family: "Helvetica Now Display", system-ui, sans-serif;
+  font-family: "Helvetica Now Display", "outfit", system-ui, sans-serif;
   font-weight: 600;
 }
 .font-helvetica-now-display-bold {
-  font-family: "Helvetica Now Display", system-ui, sans-serif;
+  font-family: "Helvetica Now Display", "outfit", system-ui, sans-serif;
   font-weight: 700;
 }
