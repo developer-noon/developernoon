@@ -1,15 +1,26 @@
+/* app/globals.css */
+@import url("https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Helvetica+Now+Display:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --gray: #111;
+  --royalblue: #4076ff;
+  --tomato: #ff6a40;
+  --whitesmoke: #f5f5f5;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gray: var(--gray);
+  --color-royalblue: var(--royalblue);
+  --color-tomato: var(--tomato);
+  --color-whitesmoke: var(--whitesmoke);
+  --font-product-sans: "Product Sans", system-ui, sans-serif;
+  --font-helvetica-now-display: "Helvetica Now Display", system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +33,43 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-product-sans);
+  margin: 0;
+  line-height: normal;
+}
+
+button {
+  font-family: var(--font-product-sans);
+}
+
+/* Utility classes for Product Sans */
+.font-product-sans {
+  font-family: "Product Sans", system-ui, sans-serif;
+}
+
+.font-product-sans-medium {
+  font-family: "Product Sans", system-ui, sans-serif;
+  font-weight: 500;
+}
+
+.font-product-sans-bold {
+  font-family: "Product Sans", system-ui, sans-serif;
+  font-weight: 700;
+}
+
+/* Utility classes for Helvetica Now Display */
+.font-helvetica-now-display {
+  font-family: "Helvetica Now Display", system-ui, sans-serif;
+}
+.font-helvetica-now-display-medium {
+  font-family: "Helvetica Now Display", system-ui, sans-serif;
+  font-weight: 500;
+}
+.font-helvetica-now-display-semibold {
+  font-family: "Helvetica Now Display", system-ui, sans-serif;
+  font-weight: 600;
+}
+.font-helvetica-now-display-bold {
+  font-family: "Helvetica Now Display", system-ui, sans-serif;
+  font-weight: 700;
 }
