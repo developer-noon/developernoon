@@ -78,7 +78,7 @@ import Button from "../Button";
 
 const Hero = () => {
   return (
-    <div className="w-full min-h-[700px] md:min-h-[600px] relative text-center text-gray font-helvetica-now-display py-28 sm:py-12 md:py-24 lg:py-40 overflow-x-hidden bg-white">
+    <section className="w-full min-h-[700px] md:min-h-[600px] relative text-center text-gray font-helvetica-now-display py-28 sm:py-12 md:py-24 lg:py-40 overflow-x-hidden bg-white">
       {/* Background Images - Hidden on mobile, visible on larger screens */}
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
         {/* Left Image - Puzzle - More visible and inside */}
@@ -87,6 +87,7 @@ const Hero = () => {
             <Image
               src="/puzzle.svg"
               alt="puzzle image"
+              loading="eager"
               fill
               className="object-contain opacity-30 lg:opacity-40 xl:opacity-50"
               sizes="(max-width: 1024px) 0vw, (max-width: 1280px) 300px, (max-width: 1536px) 450px, 550px"
@@ -100,6 +101,7 @@ const Hero = () => {
             <Image
               src="/hero-ui.svg"
               alt="hero ui image"
+              loading="eager"
               fill
               className="object-contain opacity-30 lg:opacity-40 xl:opacity-50"
               sizes="(max-width: 1024px) 0vw, (max-width: 1280px) 250px, (max-width: 1536px) 320px, 400px"
@@ -112,6 +114,7 @@ const Hero = () => {
             <Image
               src="/iconny.svg"
               alt="hero ui image"
+              loading="eager"
               fill
               className="object-contain opacity-50 lg:opacity-60 xl:opacity-100"
             />
@@ -164,7 +167,7 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

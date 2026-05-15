@@ -5,7 +5,7 @@ import Button from "../Button";
 
 const Section01 = () => {
   return (
-    <section className="w-full relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-white py-16 md:py-20 lg:py-24">
+    <section className="w-full relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-white py-16 md:py-20 lg:py-36">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}

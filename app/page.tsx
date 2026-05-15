@@ -1,3 +1,4 @@
+import ContextSection from "@/components/sections/ContextSection";
 import Header from "../components/Header";
 import Hero from "../components/sections/Hero";
 import Section01 from "../components/sections/Section01";
@@ -9,6 +10,7 @@ const Home = () => {
       <main>
         <Hero />
         <Section01 />
+        <ContextSection />
       </main>
     </div>
   );
