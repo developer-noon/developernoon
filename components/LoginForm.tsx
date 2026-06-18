@@ -20,27 +20,25 @@ export const LoginForm: React.FC = () => {
 
   // Initialize Google Sign-In
   useEffect(() => {
-    // Load Google SDK
-    const script = document.createElement("script");
-    script.src = "https://accounts.google.com/gsi/client";
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-
-    script.onload = () => {
-      if (window.google) {
+    // Ensure the script is loaded and window.google exists
+    if (typeof window !== "undefined" && window.google) {
+      // Check if we've already initialized Google in this session
+      if (!(window as any).googleInitialized) {
         window.google.accounts.id.initialize({
-          client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || "",
-          callback: handleGoogleSignIn,
+          client_id: "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com",
+          callback: handleGoogleResponse,
         });
-      }
-    };
 
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
+        // Set the flag so it doesn't run again on re-render
+        (window as any).googleInitialized = true;
       }
-    };
+
+      // Render your button normally
+      window.google.accounts.id.renderButton(
+        document.getElementById("google-signin-button"),
+        { theme: "outline", size: "large", width: "100%" },
+      );
+    }
   }, []);
 
   // Countdown timer for rate limiting
