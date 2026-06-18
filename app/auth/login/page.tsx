@@ -1,4 +1,5 @@
 import { LoginForm } from "@/components/LoginForm";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Login - Developer Noon",
@@ -12,7 +13,17 @@ export default function LoginPage() {
           <h1 className="text-4xl font-bold text-white mb-2">Developer Noon</h1>
           <p className="text-slate-300">Log in to your account</p>
         </div>
-        <LoginForm />
+        <Suspense
+          fallback={
+            <div className="w-full min-h-screen flex items-center justify-center p-4">
+              <div className="text-slate-500 animate-pulse font-product-sans">
+                Loading form...
+              </div>
+            </div>
+          }
+        >
+          <LoginForm />
+        </Suspense>
       </div>
     </div>
   );
