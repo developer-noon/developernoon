@@ -1,21 +1,30 @@
-'use client';
+"use client";
 
-import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
+import { Suspense } from "react";
 
-export default function VerifyEmailRedirect() {
+function VerifyEmailRedirectContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const token = searchParams.get('token');
+  const token = searchParams.get("token");
 
   useEffect(() => {
     // Redirect to the correct route with token
     if (token) {
       router.push(`/auth/verify-email?token=${token}`);
     } else {
-      router.push('/auth/verify-email');
+      router.push("/auth/verify-email");
     }
   }, [token, router]);
 
   return null;
+}
+
+export default function VerifyEmailRedirect() {
+  return (
+    <Suspense fallback={null}>
+      <VerifyEmailRedirectContent />
+    </Suspense>
+  );
 }

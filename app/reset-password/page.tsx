@@ -2,8 +2,9 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
+import { Suspense } from "react";
 
-export default function ResetPasswordRedirect() {
+function ResetPasswordRedirectContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
@@ -18,4 +19,12 @@ export default function ResetPasswordRedirect() {
   }, [token, router]);
 
   return null;
+}
+
+export default function ResetPasswordRedirect() {
+  return (
+    <Suspense fallback={null}>
+      <ResetPasswordRedirectContent />
+    </Suspense>
+  );
 }
