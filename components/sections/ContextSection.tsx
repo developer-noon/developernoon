@@ -16,7 +16,7 @@ export default function ContextSection() {
 
       {/* Card Wrapper */}
       <div className="relative z-10 flex h-full items-center justify-center px-6">
-        <div className="w-full max-w-[880px] rotate-[-5deg] rounded-[24px] border border-white/50 bg-gradient-to-r from-white/70 to-[#B8C8F6] px-12 py-10 shadow-[0_28px_55px_rgba(46,67,135,0.52)]">
+        <div className="w-full max-w-[880px] md:rotate-[-5deg] rounded-[24px] border border-white/50 bg-gradient-to-r from-white/100 to-[#B8C8F6] px-12 py-10 shadow-[0_28px_55px_rgba(46,67,135,0.52)]">
           <div className="grid items-center gap-6 md:grid-cols-[280px_1fr]">
             {/* Profile Image */}
             <div className="flex justify-center md:justify-start">
@@ -24,7 +24,8 @@ export default function ContextSection() {
                 <Image
                   src="/profile.png" // Place image in public/profile.png
                   alt="Hammad Noon"
-                  fill
+                  width={240}
+                  height={240}
                   priority
                   className="object-cover object-center"
                 />
@@ -32,7 +33,7 @@ export default function ContextSection() {
             </div>
 
             {/* Text Content */}
-            <div className=" text-black">
+            <div className=" text-black text-center md:text-left">
               {/* Small Label */}
               <p className="mb-2 text-[14px] font-light leading-none tracking-tight md:text-[16px]">
                 Context First
